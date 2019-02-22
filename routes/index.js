@@ -48,6 +48,7 @@ router.post('/runs/:number', (req, res, next) => {
   numberOfRuns = Number(req.params.number) + numberOfRuns;
   res.send({score: score});
 })
+
 router.get('/', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -86,6 +87,7 @@ router.get('/final', (req, res, next) => {
     score: score
   });
   score = 0;
+  numberOfRuns = 0;
 })
 
 
