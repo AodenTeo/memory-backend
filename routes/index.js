@@ -3,6 +3,9 @@ var router = express.Router();
 let numberOfDigits, flashTime, setFlashes, setNum, answer;
 let score = 0;
 let numberOfRuns = 0;
+let timeBetween;
+let randomness;
+
 
 
 /* GET home page. */
