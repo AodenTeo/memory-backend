@@ -54,10 +54,10 @@ router.get('/', (req, res, next) => {
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.send('Hello World! This is working!');
 })
-router.get('/information', (req, res, next) => {
+router.get('/information', async (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  res.send({
+  await res.send({
     numberOfDigits: numberOfDigits,
     flashTime: flashTime,
     setNum: setNum, 
